@@ -52,3 +52,14 @@ sudo update-alternatives --install /usr/bin/x-terminal-emulator x-terminal-emula
 
 `Ctl+Alt+T` should now open alacritty.
 
+# Generate ssh keys
+```
+ssh-keygen -t ed25519 -C "m@mdorst.net"
+```
+
+`ed25519` is a newer signature scheme. If the system doesn't support it, use `rsa` instead.
+
+# Add ssh key to github
+
+Navigate to `github.com/settings/keys/new` and paste in your public key from `~/.ssh/id_ed25519.pub`.
+
