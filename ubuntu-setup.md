@@ -1,6 +1,6 @@
 # Install packages
 ```
-sudo apt install zsh emacs-nox
+sudo apt install zsh emacs-nox git hub
 ```
 
 # Install Oh-My-Zsh
@@ -52,9 +52,3 @@ sudo update-alternatives --install /usr/bin/x-terminal-emulator x-terminal-emula
 
 `Ctl+Alt+T` should now open alacritty.
 
-# Install lightdm to try to fix freeze after suspend
-```
-sudo apt isntall lightdm
-```
-
-During this installation it will ask which display manager to use. Select lightdm.
