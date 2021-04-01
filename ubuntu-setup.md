@@ -18,6 +18,12 @@ Add the following line to the end of `~/.zshrc`
 eval "$(starship init zsh)"
 ```
 
+# Install Doom Emacs
+```
+git clone --depth 1 https://github.com/hlissner/doom-emacs ~/.emacs.d
+~/.emacs.d/bin/doom install
+```
+
 # Install rustup
 ```
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
