@@ -1,6 +1,6 @@
 # Install packages
 ```
-sudo apt install zsh emacs-nox git hub
+sudo apt install zsh emacs-nox git hub python3-pip ipython3
 ```
 
 # Install Oh-My-Zsh
@@ -58,6 +58,35 @@ sudo update-alternatives --install /usr/bin/x-terminal-emulator x-terminal-emula
 
 `Ctl+Alt+T` should now open alacritty.
 
+# Install pyenv
+```
+curl https://pyenv.run | bash
+```
+
+# Pyenv
+
+## List avaliable python versions
+```
+pyenv install -l | less
+```
+
+## Install prerequisites for installing python versions
+```
+sudo apt install build-essential libssl-dev zlib1g-dev libbz2-dev \
+libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev \
+xz-utils tk-dev libffi-dev liblzma-dev python-openssl git
+```
+
+## Install a python version
+```
+pyenv install 3.9.2   # or other desired version
+```
+
+## Set a global python version
+```
+pyenv global 3.9.2
+```
+
 # Generate ssh keys
 ```
 ssh-keygen -t ed25519 -C "m@mdorst.net"
@@ -69,3 +98,20 @@ ssh-keygen -t ed25519 -C "m@mdorst.net"
 
 Navigate to `github.com/settings/keys/new` and paste in your public key from `~/.ssh/id_ed25519.pub`.
 
+# Install nvm
+```
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
+```
+
+# Install npm (requires nvm)
+```
+nvm install --lts   # installs the latest LTS version
+nvm use --lts
+```
+
+Note: there is an `apt` package for node, but there are permissions issues when installing global packages. NVM fixes these.
+
+# Install marked (for markdown preview in emacs)
+```
+npm i -g marked
+```
